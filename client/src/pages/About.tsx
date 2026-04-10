@@ -133,6 +133,11 @@ export default function About() {
             <div className="space-y-4">
               {[
                 {
+                  label: "University of Maryland",
+                  role: "Computer Science, ACES",
+                  detail: "Honors College, Advanced Cybersecurity Experience for Students (ACES)",
+                },
+                {
                   label: "NSA",
                   role: "Security Researcher",
                   detail: "OpenC2 cloud spec, automated attack detection for AWS/Azure environments",
