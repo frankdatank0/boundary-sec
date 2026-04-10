@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionLabel from "@/components/SectionLabel";
 import {
-  ArrowRight, Mail, Linkedin, Calendar, Send, CheckCircle2, Loader2
+  ArrowRight, Mail, Calendar, Send, CheckCircle2, Loader2
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -209,10 +209,6 @@ export default function Contact() {
                       <div className="flex items-center gap-3">
                         <Mail className="w-4 h-4 text-primary" />
                         <span className="text-sm text-muted-foreground">valery@boundary-sec.com</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <Linkedin className="w-4 h-4 text-primary" />
-                        <span className="text-sm text-muted-foreground">LinkedIn (Boundary Security)</span>
                       </div>
                     </div>
                   </div>
