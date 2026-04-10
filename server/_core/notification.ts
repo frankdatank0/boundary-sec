@@ -13,16 +13,6 @@ const trimValue = (value: string): string => value.trim();
 const isNonEmptyString = (value: unknown): value is string =>
   typeof value === "string" && value.trim().length > 0;
 
-const buildEndpointUrl = (baseUrl: string): string => {
-  const normalizedBase = baseUrl.endsWith("/")
-    ? baseUrl
-    : `${baseUrl}/`;
-  return new URL(
-    "webdevtoken.v1.WebDevService/SendNotification",
-    normalizedBase
-  ).toString();
-};
-
 const validatePayload = (input: NotificationPayload): NotificationPayload => {
   if (!isNonEmptyString(input.title)) {
     throw new TRPCError({
@@ -58,57 +48,60 @@ const validatePayload = (input: NotificationPayload): NotificationPayload => {
 };
 
 /**
- * Dispatches a project-owner notification through the Manus Notification Service.
- * Returns `true` if the request was accepted, `false` when the upstream service
- * cannot be reached (callers can fall back to email/slack). Validation errors
- * bubble up as TRPC errors so callers can fix the payload.
+ * Sends a notification email to valery@boundary-sec.com via Resend.
+ * Returns true if sent successfully, false on transient failures.
+ * Throws TRPCError for configuration issues.
  */
 export async function notifyOwner(
   payload: NotificationPayload
 ): Promise<boolean> {
   const { title, content } = validatePayload(payload);
 
-  if (!ENV.forgeApiUrl) {
+  if (!ENV.resendApiKey) {
     throw new TRPCError({
       code: "INTERNAL_SERVER_ERROR",
-      message: "Notification service URL is not configured.",
+      message: "Email service is not configured.",
     });
   }
 
-  if (!ENV.forgeApiKey) {
-    throw new TRPCError({
-      code: "INTERNAL_SERVER_ERROR",
-      message: "Notification service API key is not configured.",
-    });
-  }
-
-  const endpoint = buildEndpointUrl(ENV.forgeApiUrl);
+  const htmlContent = content
+    .split("\n")
+    .map((line) => {
+      if (line.startsWith("**") && line.endsWith("**")) {
+        return `<strong>${line.slice(2, -2)}</strong>`;
+      }
+      const boldified = line.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+      return boldified || "<br/>";
+    })
+    .join("<br/>\n");
 
   try {
-    const response = await fetch(endpoint, {
+    const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
-        accept: "application/json",
-        authorization: `Bearer ${ENV.forgeApiKey}`,
-        "content-type": "application/json",
-        "connect-protocol-version": "1",
+        Authorization: `Bearer ${ENV.resendApiKey}`,
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ title, content }),
+      body: JSON.stringify({
+        from: "Boundary Security Contact <contact@boundary-sec.com>",
+        to: "valery@boundary-sec.com",
+        subject: title,
+        text: content,
+        html: `<pre style="font-family:sans-serif;white-space:pre-wrap">${htmlContent}</pre>`,
+      }),
     });
 
     if (!response.ok) {
       const detail = await response.text().catch(() => "");
       console.warn(
-        `[Notification] Failed to notify owner (${response.status} ${response.statusText})${
-          detail ? `: ${detail}` : ""
-        }`
+        `[Notification] Resend error (${response.status})${detail ? `: ${detail}` : ""}`
       );
       return false;
     }
 
     return true;
   } catch (error) {
-    console.warn("[Notification] Error calling notification service:", error);
+    console.warn("[Notification] Error sending email:", error);
     return false;
   }
 }
