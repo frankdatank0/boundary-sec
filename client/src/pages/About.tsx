@@ -81,10 +81,19 @@ export default function About() {
           <AnimatedSection>
             <div className="max-w-2xl mb-12">
               <SectionLabel number="01" label="The Person Behind It" />
-              <h2 className="text-3xl lg:text-4xl font-normal text-foreground mb-4">
-                Meet <span className="italic text-primary">Francis Kim</span>
-              </h2>
-              <p className="text-muted-foreground text-lg">Senior Penetration Tester and Offensive Security Engineer</p>
+              <div className="flex items-center gap-5 mt-4 mb-4">
+                <img
+                  src="/headshot.jpeg"
+                  alt="Francis Kim"
+                  className="w-16 h-16 rounded-full object-cover object-top shrink-0 ring-2 ring-primary/20"
+                />
+                <div>
+                  <h2 className="text-3xl lg:text-4xl font-normal text-foreground leading-tight">
+                    Meet <span className="italic text-primary">Francis Kim</span>
+                  </h2>
+                  <p className="text-muted-foreground mt-1">Senior Penetration Tester and Offensive Security Engineer</p>
+                </div>
+              </div>
             </div>
           </AnimatedSection>
 
