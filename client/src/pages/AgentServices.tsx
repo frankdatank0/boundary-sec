@@ -76,7 +76,7 @@ export default function AgentServices() {
                   <span className="italic text-primary">guardrails</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
-                  We build custom AI solutions for businesses — from autonomous agents that act across your tools, to AI tooling built for your team's specific workflows. Everything within boundaries you define.
+                  We build custom AI solutions for businesses, from autonomous agents that act across your tools to AI tooling built for your team's specific workflows. Everything within boundaries you define.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/contact">
@@ -204,7 +204,7 @@ export default function AgentServices() {
                 You stay in <span className="italic text-primary">control</span>
               </h2>
               <p className="text-[oklch(0.65_0.005_80)] text-lg leading-relaxed">
-                Every agent comes with a full management layer. Monitor, approve, pause, or shut down any agent — from your dashboard or your phone.
+                Every agent comes with a full management layer. Monitor, approve, pause, or shut down any agent from your dashboard or your phone.
               </p>
             </div>
           </AnimatedSection>

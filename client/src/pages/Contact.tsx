@@ -60,7 +60,7 @@ export default function Contact() {
                 Let's start a <span className="italic text-primary">conversation</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Whether you're looking for AI solutions, agent automation, cybersecurity services, or all of the above — fill out the form below or book a call directly. We typically respond within one business day.
+                Whether you're looking for AI solutions, agent automation, cybersecurity services, or all of the above, fill out the form below or book a call directly. We typically respond within one business day.
               </p>
             </div>
           </AnimatedSection>

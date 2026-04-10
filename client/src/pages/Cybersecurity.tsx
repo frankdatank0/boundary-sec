@@ -107,7 +107,7 @@ export default function Cybersecurity() {
                   <span className="italic text-primary">think for themselves</span>
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  AI agents and LLM-powered systems introduce entirely new classes of vulnerabilities. We specialize in identifying these risks before they become incidents — from prompt injection to data exfiltration through agent workflows.
+                  AI agents and LLM-powered systems introduce entirely new classes of vulnerabilities. We specialize in identifying these risks before they become incidents, from prompt injection to data exfiltration through agent workflows.
                 </p>
               </div>
             </AnimatedSection>

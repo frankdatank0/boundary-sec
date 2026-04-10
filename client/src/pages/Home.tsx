@@ -76,7 +76,7 @@ export default function Home() {
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
               <p className="text-lg lg:text-xl text-[oklch(0.75_0.005_80)] max-w-2xl mb-10 leading-relaxed">
-                We build custom AI solutions — from intelligent agents that automate your sales, marketing, and operations, to broader AI tooling for teams. Everything is designed with security at its core.
+                We build custom AI solutions, from intelligent agents that automate your sales, marketing, and operations to broader AI tooling for teams. Everything is designed with security at its core.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.3}>
@@ -124,7 +124,7 @@ export default function Home() {
                 AI solutions that work <span className="italic text-primary">across your tools</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                From autonomous agents to team-facing AI tools — each solution is purpose-built for a specific capability, integrating with the platforms you already use.
+                From autonomous agents to team-facing AI tools, each solution is purpose-built for a specific capability, integrating with the platforms you already use.
               </p>
             </div>
           </AnimatedSection>

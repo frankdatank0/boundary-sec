@@ -17,7 +17,7 @@ const values = [
   {
     icon: Code,
     title: "Engineering-First Mindset",
-    desc: "We're builders at heart. Every solution we deliver is grounded in practical engineering — not theoretical frameworks or vendor pitches. We write code, break systems, and ship results."
+    desc: "We're builders at heart. Every solution we deliver is grounded in practical engineering, not theoretical frameworks or vendor pitches. We write code, break systems, and ship results."
   },
   {
     icon: Target,
@@ -59,7 +59,7 @@ export default function About() {
                   Boundary Security was founded on a simple observation: businesses need AI automation to stay competitive, but most automation is built without security in mind. We bridge that gap.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Our team combines deep experience in software engineering, AI systems, and offensive cybersecurity. We build the agents that power your business — and we test them with the same rigor we apply to penetration testing.
+                  Our team combines deep experience in software engineering, AI systems, and offensive cybersecurity. We build the agents that power your business and test them with the same rigor we apply to penetration testing.
                 </p>
               </div>
             </AnimatedSection>
@@ -115,7 +115,7 @@ export default function About() {
                 Proven <span className="italic text-primary">expertise</span>
               </h2>
               <p className="text-[oklch(0.65_0.005_80)] text-lg leading-relaxed">
-                Our certifications reflect hands-on, practical expertise — not just theoretical knowledge. These are earned through rigorous, real-world testing scenarios.
+                Our certifications reflect hands-on, practical expertise. Not just theoretical knowledge. These are earned through rigorous, real-world testing scenarios.
               </p>
             </div>
           </AnimatedSection>
@@ -156,13 +156,13 @@ export default function About() {
               </h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  Most automation companies don't think about security. Most security companies don't build automation. We do both — and we believe that's what makes the difference.
+                  Most automation companies don't think about security. Most security companies don't build automation. We do both, and we believe that's what makes the difference.
                 </p>
                 <p>
                   When we build an agent for your business, we're simultaneously thinking about how an attacker would exploit it. When we test your AI systems, we understand the engineering decisions that created the vulnerabilities. This dual perspective produces better outcomes on both sides.
                 </p>
                 <p>
-                  We're not a large consultancy with layers of account managers. We're a focused team that works directly with you, communicates honestly, and delivers measurable results. If something isn't working, we'll tell you — and we'll fix it.
+                  We're not a large consultancy with layers of account managers. We're a focused team that works directly with you, communicates honestly, and delivers measurable results. If something isn't working, we'll tell you and we'll fix it.
                 </p>
               </div>
             </div>
@@ -178,7 +178,7 @@ export default function About() {
               Let's build something <span className="italic text-primary">together</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
-              Whether you need automation, security, or both — we'd love to hear about your challenges.
+              Whether you need automation, security, or both, we'd love to hear about your challenges.
             </p>
             <Link href="/contact">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-base px-8 h-12">
