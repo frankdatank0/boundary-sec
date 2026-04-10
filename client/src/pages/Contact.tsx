@@ -10,10 +10,10 @@ import {
   ArrowRight, Mail, Linkedin, Calendar, Send, CheckCircle2, Loader2
 } from "lucide-react";
 import { toast } from "sonner";
-import { trpc } from "@/lib/trpc";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [isPending, setIsPending] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,25 +22,26 @@ export default function Contact() {
     message: "",
   });
 
-  const submitMutation = trpc.contact.submit.useMutation({
-    onSuccess: () => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsPending(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Something went wrong. Please try again.");
+      }
       setSubmitted(true);
       toast.success("Thank you! We'll be in touch shortly.");
-    },
-    onError: (error) => {
-      toast.error(error.message || "Something went wrong. Please try again.");
-    },
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    submitMutation.mutate({
-      name: formData.name,
-      email: formData.email,
-      company: formData.company || undefined,
-      need: formData.need,
-      message: formData.message,
-    });
+    } catch (err: any) {
+      toast.error(err.message || "Something went wrong. Please try again.");
+    } finally {
+      setIsPending(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -176,9 +177,9 @@ export default function Contact() {
                       type="submit"
                       size="lg"
                       className="bg-primary hover:bg-primary/90 text-primary-foreground text-base px-8 h-12"
-                      disabled={submitMutation.isPending}
+                      disabled={isPending}
                     >
-                      {submitMutation.isPending ? (
+                      {isPending ? (
                         <>
                           <Loader2 className="w-4 h-4 mr-2 animate-spin" />
                           Sending...
