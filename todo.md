@@ -1,0 +1,24 @@
+- [x] Connect contact form "Send Message" to send email to valery@boundary-sec.com
+- [x] Create backend tRPC route for contact form submission
+- [x] Use notifyOwner or email service to deliver form data
+- [x] Update frontend Contact page to call the backend route
+- [x] Write vitest test for the contact form endpoint
+- [x] Remove "Book a Free Call" button from header navigation
+- [x] Remove "Book a Free Call" button from homepage hero
+- [x] Remove "Book a Free Call" / "Schedule a Call" section from Contact page sidebar
+- [x] Remove cybersecurity photo/section from homepage (around line 272)
+- [x] Change all "Integrates with:" to "Integrates with tools such as:" on homepage
+- [x] Add "Don't see what you need?" custom agent callout to homepage agent section
+- [x] Add "Don't see what you need?" custom agent callout to Agent Services page
+- [x] Update Cold Outreach integrations to "Gmail, Apollo, Rainforest, Hunter"
+- [x] Update Social Media integrations to add Instagram
+- [x] Update Lead Qualification integrations to add Million Verifier, Scraping Fish
+- [x] Fix security copy: semicolon instead of em dash, "encrypted or vaulted"
+- [x] Update Agent Services hero copy: colons instead of em dashes, added "posting content"
+- [x] Update "What Is an Agent" copy: removed em dash
+- [x] Update Controlled Boundaries copy: colon instead of em dash
+- [x] Update Cold Outreach inputs to "Ideal Customer Profiles (ICPs), number of companies to reach out to"
+- [x] Update custom agent callout copy: semicolon instead of em dash
+- [x] Update Management Dashboard copy: colon instead of em dash
+- [x] Create Demos page with Loom video embed
+- [x] Add Demos to header navigation, footer, and App.tsx routing
