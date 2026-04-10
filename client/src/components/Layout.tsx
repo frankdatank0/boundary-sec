@@ -7,7 +7,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Shield } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -45,9 +45,7 @@ function Header() {
       <div className="container flex items-center justify-between h-16 lg:h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-sm bg-primary flex items-center justify-center transition-transform group-hover:scale-105">
-            <Shield className="w-4.5 h-4.5 text-primary-foreground" />
-          </div>
+          <img src="/logo.png" alt="Boundary Security" className="h-8 w-auto transition-transform group-hover:scale-105" />
           <span className="text-lg font-semibold tracking-tight text-foreground">
             Boundary<span className="text-primary">Sec</span>
           </span>
@@ -135,9 +133,7 @@ function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-sm bg-primary flex items-center justify-center">
-                <Shield className="w-4.5 h-4.5 text-primary-foreground" />
-              </div>
+              <img src="/logo.png" alt="Boundary Security" className="h-8 w-auto" />
               <span className="text-lg font-semibold tracking-tight text-white">
                 Boundary<span className="text-primary">Sec</span>
               </span>
