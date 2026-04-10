@@ -60,7 +60,7 @@ export default function Contact() {
                 Let's start a <span className="italic text-primary">conversation</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Whether you're looking for AI agent automation, cybersecurity services, or both — fill out the form below or book a call directly. We typically respond within one business day.
+                Whether you're looking for AI solutions, agent automation, cybersecurity services, or all of the above — fill out the form below or book a call directly. We typically respond within one business day.
               </p>
             </div>
           </AnimatedSection>
@@ -150,7 +150,7 @@ export default function Contact() {
                           }}
                         >
                           <option value="" disabled>Select an option</option>
-                          <option value="agents">AI Agent Services</option>
+                          <option value="agents">AI Solutions & Agents</option>
                           <option value="pentest">Penetration Testing</option>
                           <option value="both">Both</option>
                         </select>

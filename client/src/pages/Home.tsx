@@ -70,13 +70,13 @@ export default function Home() {
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal leading-[1.1] text-white mb-6">
-                AI Agents Built for Business.{" "}
+                AI Solutions Built for Business.{" "}
                 <span className="text-primary italic">Security Built In.</span>
               </h1>
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
               <p className="text-lg lg:text-xl text-[oklch(0.75_0.005_80)] max-w-2xl mb-10 leading-relaxed">
-                We build custom, capability-specific AI agents that automate your sales, marketing, and operations all with either management dashboards and/or phone-based controls. Every agent is designed with security at its core.
+                We build custom AI solutions — from intelligent agents that automate your sales, marketing, and operations, to broader AI tooling for teams. Everything is designed with security at its core.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.3}>
@@ -121,10 +121,10 @@ export default function Home() {
             <div className="max-w-2xl mb-16">
               <SectionLabel number="01" label="What We Build" />
               <h2 className="text-3xl lg:text-4xl xl:text-5xl font-normal text-foreground mb-4">
-                Agents that work <span className="italic text-primary">across your tools</span>
+                AI solutions that work <span className="italic text-primary">across your tools</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Each agent is purpose-built for a specific capability, integrating with the platforms you already use. No generic chatbots. These are autonomous systems with guardrails.
+                From autonomous agents to team-facing AI tools — each solution is purpose-built for a specific capability, integrating with the platforms you already use.
               </p>
             </div>
           </AnimatedSection>
@@ -153,11 +153,11 @@ export default function Home() {
                 Don't see what you need?
               </h3>
               <p className="text-muted-foreground max-w-xl mx-auto mb-6 leading-relaxed">
-                Every business is different. We build custom-tailored agents designed around your specific workflows, tools, and goals. Tell us what you need automated and we'll scope a solution.
+                Every business is different. Whether you need an autonomous agent or a broader AI solution for your team, we design it around your specific workflows, tools, and goals.
               </p>
               <Link href="/contact">
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Let's Build Your Agent
+                  Let's Build Your Solution
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
@@ -168,7 +168,7 @@ export default function Home() {
             <div className="mt-8 text-center">
               <Link href="/agent-services">
                 <Button variant="outline" className="border-primary/30 text-primary hover:bg-primary/5">
-                  Explore Agent Services
+                  Explore AI Solutions
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </Button>
               </Link>

@@ -70,13 +70,13 @@ export default function AgentServices() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
               <div>
-                <SectionLabel label="Agent Services" />
+                <SectionLabel label="AI Solutions" />
                 <h1 className="text-4xl lg:text-5xl xl:text-6xl font-normal text-foreground mb-6 leading-[1.1]">
                   Intelligent automation with{" "}
                   <span className="italic text-primary">guardrails</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
-                  An agent is more than a chatbot. It's a purpose-built automation that can act across your tools: sending emails, updating CRMs, posting content, generating reports, and making decisions. All within boundaries you define.
+                  We build custom AI solutions for businesses — from autonomous agents that act across your tools, to AI tooling built for your team's specific workflows. Everything within boundaries you define.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/contact">

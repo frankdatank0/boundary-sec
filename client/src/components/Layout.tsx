@@ -12,7 +12,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/agent-services", label: "Agent Services" },
+  { href: "/agent-services", label: "AI Solutions" },
   { href: "/cybersecurity", label: "Cybersecurity" },
   { href: "/demos", label: "Demos" },
   { href: "/about", label: "About" },
@@ -143,7 +143,7 @@ function Footer() {
               </span>
             </div>
             <p className="text-sm leading-relaxed text-[oklch(0.60_0.005_80)] max-w-xs">
-              AI agents built for business. Security built in. Custom automation and cybersecurity services.
+              AI solutions built for business. Security built in. Custom AI, automation, and cybersecurity services.
             </p>
           </div>
 
@@ -153,7 +153,7 @@ function Footer() {
               Services
             </h4>
             <ul className="space-y-3">
-              <li><Link href="/agent-services" className="text-sm hover:text-primary transition-colors">Agent Services</Link></li>
+              <li><Link href="/agent-services" className="text-sm hover:text-primary transition-colors">AI Solutions</Link></li>
               <li><Link href="/cybersecurity" className="text-sm hover:text-primary transition-colors">Cybersecurity</Link></li>
               <li><Link href="/demos" className="text-sm hover:text-primary transition-colors">Demos</Link></li>
             </ul>
